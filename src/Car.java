@@ -1,11 +1,21 @@
 public class Car {
-
+/**
+ * Creamos la clase Car
+ */
 
     private String make;
     private String model;
     private int year;
     private double price;
 
+    /**
+     * Creamos el objeto Car con los siguientes atributos.
+     *
+     * @param make  marca del coche
+     * @param model modelo del coche
+     * @param year  año de fabricación
+     * @param price precio del coche
+     */
     public Car(String make, String model, int year, double price) {
         this.make = make;
         this.model = model;
@@ -45,15 +55,26 @@ public class Car {
         this.price = price;
     }
 
+    /**
+     * Generar una descripción completa del objeto car.
+     *
+     * @return Devuelve la descripción con los atributos year, make, model, price.
+     */
     public String carDescription() {
         return "The car is a " + year + " " + make + " " + model + " priced at $" + price;
     }
 
+   
     @Override
     public String toString() {
         return carDescription();
     }
 
+    /**
+     * Generar un objeto car con atributos make, model, year, price.
+     *
+     * @param args Asignar valores a los atributos.
+     */
     public static void main(String[] args) {
         Car car = new Car("Toyota", "Corolla", 2025, 26800);
         System.out.println(car);
